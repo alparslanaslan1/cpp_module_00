@@ -25,7 +25,7 @@ public:
 	string get_phone_number();
 	string get_darkest_secret();
 	void set_name(string name);
-	void set_surmname(string surname);
+	void set_surname(string surname);
 	void set_nickname(string nickname);
 	void set_phone_number(string phone_number);
 	void set_darkest_secret(string darkest_secret);

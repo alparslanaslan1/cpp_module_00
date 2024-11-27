@@ -30,7 +30,7 @@ void Contact::set_name(string name)
 	this->name = name;
 }
 
-void Contact::set_surmname(string surname)
+void Contact::set_surname(string surname)
 {
 	this->surname = surname;
 }
