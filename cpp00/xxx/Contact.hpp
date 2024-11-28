@@ -2,37 +2,30 @@
 #define CONTACT_HPP
 
 #include <iostream>
-
-using namespace std;
-using std::cout;
-using std::endl;
-using std::string;
-using std::cin;
-using std::getline;
+#include <string>
 
 class Contact
 {
-	private:
-	string name;
-	string surname;
-	string nickname;
-	string phone_number;
-	string darkest_secret;
+private:
+    std::string name;
+    std::string surname;
+    std::string nickname;
+    std::string phone_number;
+    std::string darkest_secret;
 
-	public:
-	string Contact::get_name();
-	string Contact::get_surname();
-	string Contact::get_nickname();
-	string Contact::get_phone_number();
-	string Contact::get_darkest_secret();
+public:
+    std::string get_name() const;
+    std::string get_surname() const;
+    std::string get_nickname() const;
+    std::string get_phone_number() const;
+    std::string get_darkest_secret() const;
 
-	void set_name(string name);
-	void set_surname(string surname);
-	void set_nickname(string nickname);
-	void set_phone_number(string phone_number);
-	void set_darkest_secret(string darkest_secret);
-	string Contact::resize_string(string str);
-
+    void set_name(const std::string& name);
+    void set_surname(const std::string& surname);
+    void set_nickname(const std::string& nickname);
+    void set_phone_number(const std::string& phone_number);
+    void set_darkest_secret(const std::string& darkest_secret);
+    std::string resize_string(const std::string& str) const;
 };
 
 #endif
