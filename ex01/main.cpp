@@ -48,29 +48,38 @@ int main()
     PhoneBook phone_book;
     std::string input;
 
-    while (true)
-	{
-        std::cout << "\033[1;36mEnter a command (ADD, SEARCH, EXIT): \033[0m";
-        PhoneBook::read_getline(input);
+    try
+    {
+        while (true)
+    	{
+            std::cout << "\033[1;36mEnter a command (ADD, SEARCH, EXIT): \033[0m";
+            PhoneBook::read_getline(input);
 
-        if (input == "EXIT")
-		{
-            std::cout << "Exiting program..." << std::endl;
-            break;
-        }
-		else if (input == "ADD")
-		{
-            add_contact(phone_book);
-        }
-		else if (input == "SEARCH")
-		{
-            phone_book.search_contact();
-        }
-		else
-		{
-            std::cout << "\033[1;31mInvalid command, please enter a valid command.\033[0m" << std::endl;
+            if (input == "EXIT")
+    		{
+                std::cout << "Exiting program..." << std::endl;
+                break;
+            }
+    		else if (input == "ADD")
+    		{
+                add_contact(phone_book);
+            }
+    		else if (input == "SEARCH")
+    		{
+                phone_book.search_contact();
+            }
+    		else
+    		{
+                std::cout << "\033[1;31mInvalid command, please enter a valid command.\033[0m" << std::endl;
+            }
         }
     }
-
-    return 0;
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	catch(...)
+	{
+		std::cerr << "Unknown exception" << '\n';
+	}
 }

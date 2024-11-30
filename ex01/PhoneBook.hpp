@@ -12,7 +12,7 @@ private:
     int contact_count;
 
 public:
-    PhoneBook();  // Constructor
+    PhoneBook();
     void add_contact(Contact contact);
     void search_contact();
     static void read_getline(std::string &str);
